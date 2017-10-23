@@ -1,0 +1,39 @@
+html {
+  margin: 0 auto;
+}
+
+body {
+  text-align:  center;
+}
+
+.jumbotron {
+  margin: 0;
+}
+
+h1 {
+  color: gray;
+}
+
+.background-wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 50rem;
+}
+
+.background-image {
+  background-image: url('https://images.unsplash.com/photo-1489684141651-7e45b4e77b3a?w=4917&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
+  width: 100%;
+}
+
+.card {
+  background: rgba(200,200,200, .7);
+  height: 18rem;
+  display: inline-flex;
+  flex-direction: row;
+  width: 25%;
+  margin-top: 1rem;
+}
+
+.help {
+  margin-top: 2rem;
+}
