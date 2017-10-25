@@ -1,0 +1,14 @@
+[    {"id": "42e82230-10fa-44ad-b020-324ccb951ccc",
+    "type": "todo"
+    "name": "Finish Unit 60",
+    "description": "Some quick example text to build on the card title and make up the bulk of the card's content",
+    "date created": "10-25-2017",
+    "date completed" : "10-26-2017"},
+
+    {"id": "1bi782230-10fa-44ad-b020-324ccb951ccc",
+      "type": "event",
+      "name": "vampire orienteering",
+      "link": "https://www.meetup.com/seattlejshackers/?_cookie-check=3jKk99f-Q-3DGSn4",
+      "date": "oct 27",
+      "isActive" : "true"}
+]

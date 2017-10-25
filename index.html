@@ -6,6 +6,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
     <link defer rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js">
     <link href="style/style.css" rel="stylesheet">
+    <script defer src="dom.js"></script>
   </head>
   <body>
     <div class="jumbotron">
@@ -16,56 +17,74 @@
     <div class="container-fluid">
       <div class="background-wrapper">
       <div class="background-image">
-        <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Finish Unit 60</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Complete</a>
-            </div>
-          </div>
+        <div class="row">
+          <div class="col-4">
             <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Clean up Code for Unit 60</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Complete</a>
+                <div class="card-1-body">
+                  <h4 class="card-1-container">Finish Unit 60</h4>
+                  <p class="card-1-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary" id="card-1-button">Complete</a>
                 </div>
               </div>
+            </div>
+            <div class="col-4">
               <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Attend Promises Breakout</h4>
+                    <h4 class="card-title">Clean up Code for Unit 60</h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="btn btn-primary">Complete</a>
                   </div>
                 </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                      <form>
+                        <label for="todo-name">ToDo</label>
+                        <input type="text" class="form-control" id="todo-name" placeholder="To Do...">
+                        <label for="todo-description">Description</label>
+                        <input type="text" class="form-control" id="todo-description" placeholder="first things first...">
+
+                      </form>
+                      <a href="#" class="btn btn-primary">Add New Task</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
                 <div class="row help">
-                  <div class="col">
+                  <div class="col-4">
                     <div class="card">
                         <div class="card-body">
                           <h4 class="card-title">Need Help with Data Structures</h4>
                           <p class="card-text">Trying to decide the best data structure for Unit 60.</p>
                           <a href="#" class="btn btn-primary">Complete</a>
                           </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                              <h4 class="card-title">Need Help with Data Structures</h4>
-                              <p class="card-text">Trying to decide the best data structure for Unit 60.</p>
-                              <a href="#" class="btn btn-primary">Complete</a>
-                              </div>
-                        </div>
-                        <div class="card">
+                    </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="card">
                           <div class="card-body">
-                            <h4 class="card-title">Events</h4>
-                            <ul class="list-group">
-                              <li class="list-group-item"><a href="http://cascadeoc.org/event/choose-adventure-6-vampire/">oct 27 - vampire orienteering</a></li>
-                              <li class="list-group-item"><a href="https://www.meetup.com/seattlejshackers/?_cookie-check=3jKk99f-Q-3DGSn4">oct 23 - javascript hack night</a></li>
-                              <li class="list-group-item"><a href="#">nov 1 - immersive info session</a></li>
-                            </ul>
-                            <button class="btn btn-secondary btn-block" type="button">Add Event</button>
+                            <h4 class="card-title">Need Help with Data Structures</h4>
+                            <p class="card-text">Trying to decide the best data structure for Unit 60.</p>
+                            <a href="#" class="btn btn-primary">Complete</a>
                           </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="card">
+                        <div class="card-body">
+                          <h4 class="card-title">Events</h4>
+                          <ul class="list-group">
+                            <li class="list-group-item"><a href="http://cascadeoc.org/event/choose-adventure-6-vampire/">oct 27 - vampire orienteering</a></li>
+                            <li class="list-group-item"><a href="https://www.meetup.com/seattlejshackers/?_cookie-check=3jKk99f-Q-3DGSn4">oct 23 - javascript hack night</a></li>
+                            <li class="list-group-item"><a href="#">nov 1 - immersive info session</a></li>
+                          </ul>
+                          <button class="btn btn-secondary btn-block" type="button">Add Event</button>
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
 
                 </div>
           </div>

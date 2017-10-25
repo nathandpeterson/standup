@@ -16,7 +16,7 @@ h1 {
 
 .background-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 50rem;
 }
 
@@ -28,12 +28,6 @@ h1 {
 .card {
   background: rgba(200,200,200, .7);
   height: 18rem;
-  display: inline-flex;
   flex-direction: row;
-  width: 25%;
-  margin-top: 1rem;
-}
-
-.help {
-  margin-top: 2rem;
+  margin: 3rem;
 }
