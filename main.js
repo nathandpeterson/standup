@@ -5,15 +5,25 @@ const port = process.env.PORT || 3000
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 if (process.env.NODE_ENV !== 'test') app.use(morgan('dev'))
-const notes = new JSONMecha(path.join(__dirname, 'data.json'))
+const fs = require('fs')
+const notes = './data.json'
+const backup = './backup.json'
 
 app.use(bodyParser.json())
 
 app.disable('x-powered-by')
 
+app.get('/notes', (req, res, next) => {
+  const textData = fs.readFileSync(backup, 'utf-8')
+  const data = JSON.parse(data)
+  res.status(200).json(retrieve)
+})
+
 app.get('/notes/:id', (req, res, next) => {
-  const data = notes.get()
-  res.json(data)
+  const textData = fs.readFileSync(backup, 'utf-8')
+  const data = JSON.parse(data)
+  if(!data.id === req.params.id) return {status: 400, message: 'no note found with that id'}
+  res.json(data.id)
 })
 
 app.use((err, req, res, next) => {
