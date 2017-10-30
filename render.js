@@ -5,7 +5,8 @@ const semanticMonths = {1:'january', 2: 'february', 3: 'march', 4: 'april', 5: '
 // const cards = querySelector('.card-body')
 // const promises = []
 // const complete = querySelector('.complete')
-
+const submitTodo = document.querySelector('.submit-todo')
+let currentTimeAndDate
 
 function renderTime(data){
   let dateTimeArray = data.split(' ')
@@ -16,14 +17,25 @@ function renderTime(data){
     realtime[0] -=12
     amPM = 'pm'
   }
+  currentTimeAndDate = `${realtime[0]}:${realtime[1]} ${amPM} on ${semanticMonths[date[1]]} ${date[2]} ${date[0]}`
   let container = document.querySelector('#date')
-  container.innerHTML =
-  `${realtime[0]}:${realtime[1]} ${amPM} on ${semanticMonths[date[1]]} ${date[2]} ${date[0]}`
+  container.innerHTML = currentTimeAndDate
 }
 
 axios.get(API)
-  .then(res => renderTime(res.data.formatted))
-  .catch(err => console.log(err))
+    .then(res => renderTime(res.data.formatted))
+    .catch(err => console.log(err))
+
+
+submitTodo.addEventListener('click', () => {
+    let todoName = document.querySelector('#todo-name')
+    let todoDescription = document.querySelector('#todo-description')
+    let data = {type: 'todo',
+                name: todoName.value,
+                description: todoDescription.value,
+                date_created: currentTimeAndDate}
+
+  })
 
 // for(let i = 0; i < cards.length; i++){
 //   let promise = axios.get(`${SERVER}`)
