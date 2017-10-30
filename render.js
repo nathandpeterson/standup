@@ -7,6 +7,7 @@ const semanticMonths = {1:'january', 2: 'february', 3: 'march', 4: 'april', 5: '
 // const complete = querySelector('.complete')
 const submitTodo = document.querySelector('.submit-todo')
 let currentTimeAndDate
+const control = require('./controller/control.js')
 
 function renderTime(data){
   let dateTimeArray = data.split(' ')
@@ -34,7 +35,7 @@ submitTodo.addEventListener('click', () => {
                 name: todoName.value,
                 description: todoDescription.value,
                 date_created: currentTimeAndDate}
-
+    //how should i send this data to the backend?
   })
 
 // for(let i = 0; i < cards.length; i++){
